@@ -1,0 +1,41 @@
+:root {
+  --size-height: 105em;
+  --size-width: 50em;
+}
+
+body, html {
+  height: var(--size-height);
+  width: var(--size-width);
+  color: #ffffff;
+  background-color: black;
+  margin: 100px auto 100px auto;
+}
+h2 {
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+h4 {
+  text-align: center;
+}
+li {
+  list-style: none;
+  padding: 10px;
+}
+
+.container {
+  padding: 6px;
+  margin-bottom: 2px;
+  width: var(--size-width);
+  height: var(--size-height);
+}
+
+fieldset {
+  width: auto;
+}
+#title-li {
+  font-size: 16pt;
+  margin-left: 1em;
+  margin-bottom: 0px;
+  margin-top: 5vh;
+
+}
