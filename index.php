@@ -313,33 +313,33 @@
             <li id="title-li">strtolower() | <small>Converte o texto da string para minúsculo</small></li>
             <li>
                 <fieldset style="width:<?= $widthFieldset; ?>px; height:2em;">
-                <?php 
-                $nameToLower = "STRING COM CAIXA ALTA";
-                echo "Frase: $nameToLower<br>";
-                echo strtolower($nameToLower);
-                ?>
+                    <?php
+                    $nameToLower = "STRING COM CAIXA ALTA";
+                    echo "Frase: $nameToLower<br>";
+                    echo strtolower($nameToLower);
+                    ?>
                 </fieldset>
             </li>
 
             <li id="title-li">strtoupper() | <small>Converte o texto da string para maiúsculo</small></li>
             <li>
                 <fieldset style="width:<?= $widthFieldset; ?>px; height:2em;">
-                <?php 
-                $nameToUpper = "string com caixa baixa";
-                echo "Frase: $nameToUpper<br>";
-                echo strtoupper($nameToUpper);
-                ?>
+                    <?php
+                    $nameToUpper = "string com caixa baixa";
+                    echo "Frase: $nameToUpper<br>";
+                    echo strtoupper($nameToUpper);
+                    ?>
                 </fieldset>
             </li>
 
             <li id="title-li">ucfirst() | <small>Converte para maiúscula a primeira letra da frase</small></li>
             <li>
                 <fieldset style="width:<?= $widthFieldset; ?>px; height:2em;">
-                <?php 
-                $strinucfirst = "string com caixa baixa";
-                echo "Frase: $strinucfirst<br>";
-                echo ucfirst($strinucfirst);
-                ?>
+                    <?php
+                    $strinucfirst = "string com caixa baixa";
+                    echo "Frase: $strinucfirst<br>";
+                    echo ucfirst($strinucfirst);
+                    ?>
                 </fieldset>
             </li>
 
@@ -347,33 +347,52 @@
             <li id="title-li">ucwords() | <small>Converte para maiúscula a primeira letra de cada palavra da string</small></li>
             <li>
                 <fieldset style="width:<?= $widthFieldset; ?>px; height:5em;">
-                <?php 
-                $stringucwords = "raimundo marques de freitas filho o mestre está de volta ao trabalho";
-                echo "Frase: $stringucwords<br>";
-                echo ucwords($stringucwords);
-                ?>
+                    <?php
+                    $stringucwords = "raimundo marques de freitas filho o mestre está de volta ao trabalho";
+                    echo "Frase: $stringucwords<br>";
+                    echo ucwords($stringucwords);
+                    ?>
                 </fieldset>
             </li>
 
             <li id="title-li">strrev() |<small>Reverte o valor das strings (escreve as palavras ao contrário)</small></li>
             <li>
                 <fieldset style="width:<?= $widthFieldset; ?>px; height:2em;">
-                <?php 
-                $stringstrrev = "raimundo marques";
-                echo "Frase: $stringstrrev<br>";
-                echo strrev($stringstrrev);
-                ?>
+                    <?php
+                    $stringstrrev = "raimundo marques";
+                    echo "Frase: $stringstrrev<br>";
+                    echo strrev($stringstrrev);
+                    ?>
                 </fieldset>
             </li>
 
             <li id="title-li">strpos() | <small>Procura uma determinada palavra dentro de uma string e diz sua posição</small></li>
             <li>
                 <fieldset style="width:<?= $widthFieldset; ?>px; height:2em;">
-                <?php 
-                $stringstrpos = "raimundo marques de freitas";
-                echo "Frase: $stringstrpos<br>";
-                echo strpos($stringstrpos, "freitas");
-                ?>
+                    <?php
+                    echo "Frase" . $stringstrpos = "raimundo marques de freitas";
+
+                    echo "Buscando a palavra => " . $stringBusca = "freitas";
+                    echo "</br>";
+                    $position =  strpos($stringstrpos, $stringBusca);
+
+                    echo "Posição da string => $position";
+                    ?>
+                </fieldset>
+            </li>
+
+            <li id="title-li">stripos() | <small>Ignora a palavra mesmo se ela não existir mas manda ainda assim manda a posição</small></li>
+            <li>
+                <fieldset style="width:<?= $widthFieldset; ?>px; height:3em;">
+                    <?php
+                    echo "Frase => " . $stringstripos = "raimundo marques de freitas</br>";
+
+                    echo "Buscando a palavra => " . $stringBusca = "FREITAS";
+                    echo "</br>";
+                    $position =  stripos($stringstripos, $stringBusca);
+
+                    echo "Posição da string => $position";
+                    ?>
                 </fieldset>
             </li>
 
