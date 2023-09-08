@@ -357,20 +357,24 @@
 
             <li id="title-li">strrev() |<small>Reverte o valor das strings (escreve as palavras ao contrário)</small></li>
             <li>
-                <fieldset style="width:<?= $widthFieldset; ?>px; height:2em;">
+                <fieldset style="width:<?= $widthFieldset; ?>px; height:5em;">
                     <?php
                     $stringstrrev = "raimundo marques";
-                    echo "Frase: $stringstrrev<br>";
-                    echo strrev($stringstrrev);
+                    echo "Nome => $stringstrrev<br>";
+                    echo "Reverso => " . strrev($stringstrrev) . "</br></br>";
+
+                    $stringstrrev2 = "Aslan Levi da Paixao Marques";
+                    echo "Nome2 => $stringstrrev2<br>";
+                    echo "Reverso => " . strrev($stringstrrev2) . "</br>";
                     ?>
                 </fieldset>
             </li>
 
             <li id="title-li">strpos() | <small>Procura uma determinada palavra dentro de uma string e diz sua posição</small></li>
             <li>
-                <fieldset style="width:<?= $widthFieldset; ?>px; height:2em;">
+                <fieldset style="width:<?= $widthFieldset; ?>px; height:3em;">
                     <?php
-                    echo "Frase" . $stringstrpos = "raimundo marques de freitas";
+                    echo "Frase => " . $stringstrpos = "raimundo marques de freitas</br>";
 
                     echo "Buscando a palavra => " . $stringBusca = "freitas";
                     echo "</br>";
@@ -381,7 +385,7 @@
                 </fieldset>
             </li>
 
-            <li id="title-li">stripos() | <small>Ignora a palavra mesmo se ela não existir mas manda ainda assim manda a posição</small></li>
+            <li id="title-li">stripos() | <small>Ignora se a palavra é maiúscula ou não e retorna a posição</small></li>
             <li>
                 <fieldset style="width:<?= $widthFieldset; ?>px; height:3em;">
                     <?php
