@@ -400,6 +400,95 @@
                 </fieldset>
             </li>
 
+            <li id="title-li">substr_count() | <small>Conta quantas vezes uma palavra aparece dentro de uma string</small></li>
+            <li>
+                <fieldset style="width:<?= $widthFieldset; ?>px; height:5em;">
+                    <?php
+                    echo "Frase => " . $strSubstr_count = "Vamos estudar PHP pois o PHP é muito importante. Podemos ganhar muito dinheiro com o PHP! PHP! PHP! PHP!</br></br>";
+
+                    echo "Buscando a palavra => " . $stringBusca = "PHP";
+                    echo "</br>";
+                    $contSubstr = substr_count($strSubstr_count, $stringBusca);
+                    echo "A palavra $stringBusca aparece $contSubstr vezes!</br>";
+                    ?>
+                </fieldset>
+            </li>
+
+            <li id="title-li">substr() | Parâmetros: substr($variavel, inicio, qtdString)</li>
+            <li>
+                <fieldset style="width:<?= $widthFieldset; ?>px; height:4em;">
+                    <?php
+                    $site = "Curso em Vídeo</br>";
+                    $subs = substr($site, 0, 5);
+                    echo "Frase => $site</br>";
+                    echo $subs;
+                    ?>
+                </fieldset>
+            </li>
+
+
+            <li id="title-li">str_pad() | Faz uma string caber no início, meio ou fim de uma frase</li>
+            <li>
+                <fieldset style="width:<?= $widthFieldset; ?>px; height:23em;">
+                    <li>
+                        Início : str_pad($varial, espaço, "separador", STR_PAD_RIGHT)
+                        <fieldset style="width:450px; height:4em;">
+                            <?php
+                            $nome = "Guanabara";
+                            $novo = str_pad($nome, 19, "*", STR_PAD_RIGHT);
+                            print("Meu professor $novo é estranho!");
+                            ?>
+                        </fieldset>
+                    </li>
+
+                    <li>
+                        Meio : str_pad($varial, espaço, "separador", STR_PAD_CENTER)
+                        <fieldset style="width:450px; height:4em;">
+                            <?php
+                            $nome = "Guanabara";
+                            $novo = str_pad($nome, 19, "-", STR_PAD_BOTH);
+                            print("Meu professor $novo é estranho!");
+                            ?>
+                        </fieldset>
+                    </li>
+
+                    <li>
+                        Final : str_pad($varial, espaço, "separador", STR_PAD_LEFT)
+                        <fieldset style="width:450px; height:4em;">
+                            <?php
+                            $nome = "Guanabara";
+                            $novo = str_pad($nome, 19, ",", STR_PAD_LEFT);
+                            print("Meu professor $novo é estranho!");
+                            ?>
+                        </fieldset>
+                    </li>
+                </fieldset>
+            </li>
+
+            <li id="title-li">str_repeat() | Repete uma string</li>
+            <li>
+                <fieldset style="width:<?= $widthFieldset; ?>px; height:3em;">
+                <?php 
+                    $txt = str_repeat("Php", 8);
+                    echo "Eu não canso de dizer: $txt";
+                ?>
+                </fieldset>
+            </li>
+
+            <li id="title-li">str_replace()</li>
+            <li>
+                <fieldset style="width:<?= $widthFieldset; ?>px; height:3em;">
+                <?php 
+                    $frase = "Tenho vontade de comer x-salada todos os dias! Eu não vivo sem x-salada</br>";
+                    $newFrase = str_replace("x-salada", "PHP", $frase);
+
+                    echo "Frase => " . $frase . "</br>";
+                    echo "New Frase => " . $newFrase;
+                ?>
+                </fieldset>
+            </li>
+
+
         </ul>
     </div>
 
