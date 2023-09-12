@@ -430,66 +430,249 @@
             <li id="title-li">str_pad() | Faz uma string caber no início, meio ou fim de uma frase</li>
             <li>
                 <fieldset style="width:<?= $widthFieldset; ?>px; height:23em;">
-                    <li>
-                        Início : str_pad($varial, espaço, "separador", STR_PAD_RIGHT)
-                        <fieldset style="width:450px; height:4em;">
-                            <?php
-                            $nome = "Guanabara";
-                            $novo = str_pad($nome, 19, "*", STR_PAD_RIGHT);
-                            print("Meu professor $novo é estranho!");
-                            ?>
-                        </fieldset>
-                    </li>
-
-                    <li>
-                        Meio : str_pad($varial, espaço, "separador", STR_PAD_CENTER)
-                        <fieldset style="width:450px; height:4em;">
-                            <?php
-                            $nome = "Guanabara";
-                            $novo = str_pad($nome, 19, "-", STR_PAD_BOTH);
-                            print("Meu professor $novo é estranho!");
-                            ?>
-                        </fieldset>
-                    </li>
-
-                    <li>
-                        Final : str_pad($varial, espaço, "separador", STR_PAD_LEFT)
-                        <fieldset style="width:450px; height:4em;">
-                            <?php
-                            $nome = "Guanabara";
-                            $novo = str_pad($nome, 19, ",", STR_PAD_LEFT);
-                            print("Meu professor $novo é estranho!");
-                            ?>
-                        </fieldset>
-                    </li>
+            <li>
+                Início : str_pad($varial, espaço, "separador", STR_PAD_RIGHT)
+                <fieldset style="width:450px; height:4em;">
+                    <?php
+                    $nome = "Guanabara";
+                    $novo = str_pad($nome, 19, "*", STR_PAD_RIGHT);
+                    print("Meu professor $novo é estranho!");
+                    ?>
                 </fieldset>
+            </li>
+
+            <li>
+                Meio : str_pad($varial, espaço, "separador", STR_PAD_CENTER)
+                <fieldset style="width:450px; height:4em;">
+                    <?php
+                    $nome = "Guanabara";
+                    $novo = str_pad($nome, 19, "-", STR_PAD_BOTH);
+                    print("Meu professor $novo é estranho!");
+                    ?>
+                </fieldset>
+            </li>
+
+            <li>
+                Final : str_pad($varial, espaço, "separador", STR_PAD_LEFT)
+                <fieldset style="width:450px; height:4em;">
+                    <?php
+                    $nome = "Guanabara";
+                    $novo = str_pad($nome, 19, ",", STR_PAD_LEFT);
+                    print("Meu professor $novo é estranho!");
+                    ?>
+                </fieldset>
+            </li>
+            </fieldset>
             </li>
 
             <li id="title-li">str_repeat() | Repete uma string</li>
             <li>
                 <fieldset style="width:<?= $widthFieldset; ?>px; height:3em;">
-                <?php 
+                    <?php
                     $txt = str_repeat("Php", 8);
                     echo "Eu não canso de dizer: $txt";
-                ?>
+                    ?>
                 </fieldset>
             </li>
 
             <li id="title-li">str_replace()</li>
             <li>
                 <fieldset style="width:<?= $widthFieldset; ?>px; height:3em;">
-                <?php 
+                    <?php
                     $frase = "Tenho vontade de comer x-salada todos os dias! Eu não vivo sem x-salada</br>";
                     $newFrase = str_replace("x-salada", "PHP", $frase);
 
                     echo "Frase => " . $frase . "</br>";
                     echo "New Frase => " . $newFrase;
-                ?>
+                    ?>
+                </fieldset>
+            </li>
+
+            <li id="title-li">Exercício de programação 6 : Contagem de vogais</li>
+
+            <li>
+                <fieldset style="width:<?= $widthFieldset; ?>px; height:3em;">
+                    <?php
+
+                    $nome = 'raimundo marques';
+                    function countVowels($nome)
+                    {
+                        $vogais = ['a', 'e', 'i', 'o', 'u'];
+                        $cont = 0;
+                        for ($j = 0; $j < count($vogais); $j++) {
+                            for ($i = 0; $i < strlen($nome); $i++) {
+                                if ($vogais[$j] === $nome[$i]) {
+                                    $cont += 1;
+                                }
+                            }
+                        }
+                        echo "Nome $nome tem $cont vogais";
+                    }
+                    echo countVowels($nome);
+
+                    ?>
                 </fieldset>
             </li>
 
 
+            <li id="title-li">Exercício de programação 7 : Contagem de vogais</li>
+            <li>
+                <fieldset>
+                    <p>* Crie uma função que recebe um array de itens de supermercado.</p>
+                    <p>* Retorne um array em forma de string, separados por vírgula;</p>
+
+                    <?php
+                    $lista = ['arroz', 'trigo', 'carvão', 'cerveja'];
+
+                    function listaParaString($arr)
+                    {
+
+                        $str = "Itens que você levou para o supermercado: ";
+
+                        for ($i = 0; $i < count($arr); $i++) {
+
+                            if ($i + 1 == count($arr)) {
+                                $str .= "$arr[$i]."; //coloca um ponto no final do array
+                            } else {
+                                $str .= "$arr[$i], ";
+                            }
+                        }
+                        return $str;
+                    }
+                    echo listaParaString($lista);
+                    ?>
+                </fieldset>
+            </li>
+
+            <li id="title-li">Exercício de programação 8 : Contagem de vogais</li>
+            <li>
+                <fieldset>
+                    <p>Verifica se o número é primo</p>
+                    <?php
+                    function isPrime($num)
+                    {
+                        $primo = $num;
+                        if ($num < 2) {
+                            return false;
+                        } else {
+
+                            if ($num % $primo === 0) {
+
+                                echo "Numero $num é primo";
+                            } else {
+
+                                echo "Número não é primo";
+                            }
+                        }
+                        return $primo;
+                    }
+
+                    $numero = 12;
+                    isPrime($numero);
+                    ?>
+                </fieldset>
+            </li>
+
+
+
+            <li id="title-li">Exercício de programação 9 : Preços mais caros</li>
+            <li>
+                <fieldset>
+                    <p>Verifica os itens mais caros de um carro</p>
+                    <pre>
+                    <?php
+                    $arrayCarros = [
+                        'porta' => 250,
+                        'macaneta' => 86,
+                        'motor' => 832,
+                        'retrovisor' => 77
+                    ];
+
+                    print_r($arrayCarros);
+
+                    function carros($arr)
+                    {
+                        $maisCaro = [];
+
+                        foreach ($arr as $item => $preco) {
+
+                            if ($preco > 300) {
+                                array_push($maisCaro, $item);
+                            }
+                        }
+
+                        return $maisCaro;
+                    }
+
+
+                    $newArray = carros($arrayCarros);
+
+                    print_r($newArray);
+
+                    ?>
+                    </pre>
+                </fieldset>
+            </li>
+
+
+
+            <li id="title-li">Do nada</li>
+            <fieldset>
+                <?php
+
+                // $str = "Aqui tem uma string muito grande com varios caracteres para percorrer";
+                $str = "O rato roeu a ropa do rei de roma";
+
+                $cont = 0;
+
+                for ($i = 0; $i < strlen($str); $i++) {
+                    echo "$str[$i]</br>";
+                    if ($str[$i] === 'a' || $str[$i] === 'A') {
+                        $cont += 1;
+                    }
+                }
+                echo "A vogal 'a' se repete $cont vezes na string";
+                ?>
+            </fieldset>
+
+            <li id="title-li">Exercício de programação 41</li>
+            <li>
+                <fieldset>
+                    <p>Transforme a string 'este item está em promoção' em 'este item está em PROMOÇÃO'</p>
+                    <pre>
+                    <?php
+                    $frase = "Este item está em promoção";
+
+                    echo $frase . "</br>";
+
+                    $promo = stripos($frase, "promoção");
+
+                    echo $promo . "</br>";
+
+                    ?>
+                    </pre>
+                </fieldset>
+            </li>
+
+            <li id="title-li">Exercício de programação</li>
+            <li>
+                <fieldset>  
+                    <pre>
+                    <?php
+
+                    $textoHtml = "<p>Aqui entra um parágrafo <small>Para testar o <strong>HTML<strong/></small></p>";
+
+                    $newTxt = strip_tags($textoHtml);
+
+                    echo "$newTxt";
+
+
+                    ?>
+                    </pre>
+                </fieldset>
+            </li>
         </ul>
+
     </div>
 
 </body>
